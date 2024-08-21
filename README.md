@@ -1,6 +1,29 @@
-## My Personal Portfolio WebApp
+# Rsbuild Project
 
-Link  ->  [Portfolio](https://aakashc.com.np)
+## Setup
 
-## Technologies Used
-React,TailwindCSS,AOS(Animation On Scroll) library,Netlify
+Install the dependencies:
+
+```bash
+pnpm install
+```
+
+## Get Started
+
+Start the dev server:
+
+```bash
+pnpm dev
+```
+
+Build the app for production:
+
+```bash
+pnpm build
+```
+
+Preview the production build locally:
+
+```bash
+pnpm preview
+```

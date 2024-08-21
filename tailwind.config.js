@@ -1,37 +1,29 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    purge: {
-        mode: "all",
-        enabled: true,
-        content: [
-            "./src/*.js",
-            "./src/*.jsx",
-            "./src/**/*.js",
-            "./src/**/*.jsx",
-            "./src/**/**/*.js",
-            "./src/**/**/*.jsx"
-        ]
-    },
+    content: ["./src/**/*.{html,ts,tsx}"],
     theme: {
         extend: {
-            height: {
-                "68": "20rem",
-                "72": "24rem",
-                "76": "28rem",
-                "80": "32rem",
-                "84": "36rem",
-                "88": "40rem"
-            },
-
-            width: {
-                "68": "20rem",
-                "72": "24rem",
-                "76": "28rem",
-                "80": "32rem",
-                "84": "36rem",
-                "88": "40rem"
+            colors: {
+                "light": {
+                    "background": "#FBF1C9",
+                    "foreground": "#3C3836",
+                    "yellow": "#D79921",
+                    "green": "#98971A",
+                    "gray": "#7C6F64",
+                    "blue": "#458588",
+                    "red": "#CA2124"
+                },
+                "dark": {
+                    "background": "#1c1c1c",
+                    "foreground": "#EBDBB2",
+                    "yellow": "#D79921",
+                    "green": "#98971A",
+                    "gray": "#A89984",
+                    "blue": "#458588",
+                    "red": "#CA2124"
+                },
             }
-        }
+        },
     },
-    variants: {},
-    plugins: []
-};
+    plugins: [],
+}
