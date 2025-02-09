@@ -4,5 +4,5 @@ export enum Commands {
 }
 
 export type CommandsOutput = {
-    [key in Commands]: React.FC;
+    [key in Commands]: JSX.Element;
 };

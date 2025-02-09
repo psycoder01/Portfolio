@@ -7,10 +7,12 @@ import { executeCommand } from "@/pages/commandExecutor";
 
 export default function Home() {
     const ref = useRef<HTMLInputElement>(null);
-    const { command, setCommand } = useHistory([]);
+    const { command, setCommand, history, setHistory } = useHistory([]);
 
     const handleEnterKey = (command: String) => {
-        executeCommand(command);
+        const result = executeCommand(command);
+        setHistory(result);
+        setCommand("");
     };
 
     const handleAction = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -20,6 +22,9 @@ export default function Home() {
     return (
         <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
             <div className="overflow-y-auto h-full">
+                {history.map((h) => (
+                    <div key={h.id}>{h.output}</div>
+                ))}
                 <InputPrompt
                     ref={ref}
                     value={command}
