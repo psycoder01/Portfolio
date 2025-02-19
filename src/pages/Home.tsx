@@ -4,14 +4,21 @@ import { useHistory } from "@/hooks";
 import { InputPrompt } from "@/components/derived/Input";
 
 import { executeCommand } from "@/pages/commandExecutor";
+import { Commands } from "@/bin/types";
 
 export default function Home() {
     const ref = useRef<HTMLInputElement>(null);
-    const { command, setCommand, history, setHistory } = useHistory([]);
+    const { command, setCommand, history, setHistory, clearHistory } =
+        useHistory([]);
 
     const handleEnterKey = (command: String) => {
-        const result = executeCommand(command);
-        setHistory(result);
+        if (command === Commands.clear) {
+            clearHistory();
+        } else {
+            const result = executeCommand(command);
+            setHistory(result);
+        }
+
         setCommand("");
     };
 
