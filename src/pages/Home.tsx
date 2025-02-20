@@ -1,25 +1,10 @@
 import { useRef } from "react";
 
 import { useHistory } from "@/hooks";
-import { InputPrompt } from "@/components/derived/Input";
-
-import { executeCommand } from "@/pages/commandExecutor";
 import { Commands } from "@/bin/types";
+import { executeCommand } from "@/pages/commandExecutor";
 
-const Information = () => (
-    <div className="my-4">
-        <pre>
-            Type <span className="font-bold">help</span> to see list of
-            available commands.
-        </pre>
-        <pre>
-            Type <span className="font-bold">neofetch</span> to display summary.
-        </pre>
-        <pre>
-            Type <span className="font-bold">repo</span> to go to my GitHub.
-        </pre>
-    </div>
-);
+import { InputPrompt, Information } from "@/components/derived";
 
 export default function Home() {
     const ref = useRef<HTMLInputElement>(null);
