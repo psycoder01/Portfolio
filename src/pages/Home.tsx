@@ -2,8 +2,9 @@ import { useRef } from "react";
 
 import { useHistory } from "@/hooks";
 import { Commands } from "@/bin/types";
-import { executeCommand } from "@/pages/commandExecutor";
+import { commandExecutable } from "@/utils";
 
+import { executeCommand } from "@/pages/commandExecutor";
 import { InputPrompt, Information } from "@/components/derived";
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
                 <InputPrompt
                     ref={ref}
                     value={command}
+                    executable={commandExecutable(command)}
                     onChange={(e) => setCommand(e.target.value)}
                     onKeyDown={handleAction}
                 />
