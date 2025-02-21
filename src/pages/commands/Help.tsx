@@ -5,7 +5,9 @@ const Help = () => {
         <>
             <div>Available commands : </div>
             {Object.values(Commands).map((cmd) => (
-                <span className="mr-4 font-bold">{cmd}</span>
+                <span key={cmd} className="mr-4 font-bold">
+                    {cmd}
+                </span>
             ))}
         </>
     );

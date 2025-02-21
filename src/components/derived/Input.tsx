@@ -1,3 +1,5 @@
+import { forwardRef } from "react";
+
 import { PS1 } from "@/components/common";
 
 interface IInputPromptProps {
@@ -8,8 +10,8 @@ interface IInputPromptProps {
     onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }
 
-export const InputPrompt = (props: IInputPromptProps) => {
-    const { ref, value, executable = false, onChange, onKeyDown } = props;
+export const InputPrompt = forwardRef((props: IInputPromptProps, ref: any) => {
+    const { value, executable = false, onChange, onKeyDown } = props;
 
     const textColor = executable ? "text-dark-green" : "text-dark-red";
 
@@ -32,4 +34,4 @@ export const InputPrompt = (props: IInputPromptProps) => {
             />
         </div>
     );
-};
+});

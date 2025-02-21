@@ -30,14 +30,10 @@ export default function Home() {
     return (
         <div className="p-8 overflow-x-hidden overflow-y-auto h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
             {<Information />}
-            <div className="overflow-y-auto h-full">
+            <div className="overflow-x-hidden overflow-y-auto h-full">
                 {history.map((h) => (
-                    <div className="py-4">
-                        <History
-                            key={h.id}
-                            command={h.command}
-                            output={h.output}
-                        />
+                    <div key={h.id} className="py-4">
+                        <History command={h.command} output={h.output} />
                     </div>
                 ))}
                 <InputPrompt
