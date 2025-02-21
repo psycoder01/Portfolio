@@ -5,7 +5,7 @@ import { Commands } from "@/bin/types";
 import { commandExecutable } from "@/utils";
 
 import { executeCommand } from "@/pages/commandExecutor";
-import { InputPrompt, Information } from "@/components/derived";
+import { InputPrompt, Information, History } from "@/components/derived";
 
 export default function Home() {
     const ref = useRef<HTMLInputElement>(null);
@@ -28,11 +28,17 @@ export default function Home() {
     };
 
     return (
-        <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
-            {history.length === 0 && <Information />}
+        <div className="p-8 overflow-x-hidden overflow-y-auto h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
+            {<Information />}
             <div className="overflow-y-auto h-full">
                 {history.map((h) => (
-                    <div key={h.id}>{h.output}</div>
+                    <div className="py-4">
+                        <History
+                            key={h.id}
+                            command={h.command}
+                            output={h.output}
+                        />
+                    </div>
                 ))}
                 <InputPrompt
                     ref={ref}
