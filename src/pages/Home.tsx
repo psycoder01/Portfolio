@@ -30,20 +30,18 @@ export default function Home() {
     return (
         <div className="p-8 overflow-x-hidden overflow-y-auto h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
             {<Information />}
-            <div className="overflow-x-hidden overflow-y-auto h-full">
-                {history.map((h) => (
-                    <div key={h.id} className="py-4">
-                        <History command={h.command} output={h.output} />
-                    </div>
-                ))}
-                <InputPrompt
-                    ref={ref}
-                    value={command}
-                    executable={commandExecutable(command)}
-                    onChange={(e) => setCommand(e.target.value)}
-                    onKeyDown={handleAction}
-                />
-            </div>
+            {history.map((h) => (
+                <div key={h.id} className="py-4">
+                    <History command={h.command} output={h.output} />
+                </div>
+            ))}
+            <InputPrompt
+                ref={ref}
+                value={command}
+                executable={commandExecutable(command)}
+                onChange={(e) => setCommand(e.target.value)}
+                onKeyDown={handleAction}
+            />
         </div>
     );
 }

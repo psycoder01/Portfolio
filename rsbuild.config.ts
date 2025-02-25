@@ -8,6 +8,17 @@ export default defineConfig({
     tools: {
         rspack: {
             plugins: [new ESLintPlugin()],
+            module: {
+                rules: [
+                    {
+                        test: /\.pdf$/,
+                        type: "asset/resource",
+                        generator: {
+                            filename: "assets/[name][ext]",
+                        },
+                    },
+                ],
+            },
         },
     },
 });
