@@ -21,4 +21,5 @@ export default defineConfig({
             },
         },
     },
+    html: { title: "PSYCODER01" },
 });
