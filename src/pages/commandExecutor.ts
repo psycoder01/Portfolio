@@ -11,5 +11,5 @@ export const executeCommand = (command: String) => {
         return commands[cmd as Commands];
     }
 
-    return UnknownCommand();
+    return UnknownCommand;
 };

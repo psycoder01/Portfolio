@@ -4,11 +4,11 @@ import { commandExecutable } from "@/utils";
 
 interface IHistory {
     command: String;
-    output: JSX.Element;
+    output: React.FC;
 }
 
 export const History = (props: IHistory) => {
-    const { command, output } = props;
+    const { command, output: Output } = props;
     const textColor = commandExecutable(command)
         ? "text-dark-green"
         : "text-dark-red";
@@ -19,7 +19,9 @@ export const History = (props: IHistory) => {
                 <ChevronRight />
                 <span className={textColor}>{command}</span>
             </div>
-            <div>{output}</div>
+            <div>
+                <Output />
+            </div>
         </>
     );
 };

@@ -1,4 +1,4 @@
-const UnknownCommand = () => {
+const UnknownCommand: React.FC = () => {
     return <div>command not found </div>;
 };
 

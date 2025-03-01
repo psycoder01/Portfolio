@@ -6,7 +6,7 @@ interface History {
     id: number;
     date: Date;
     command: Commands | string;
-    output: JSX.Element;
+    output: React.FC;
 }
 
 export const useHistory = (defaultValue: Array<History>) => {
@@ -17,7 +17,7 @@ export const useHistory = (defaultValue: Array<History>) => {
         history,
         command,
         setCommand,
-        setHistory: (value: JSX.Element) => {
+        setHistory: (value: React.FC) => {
             const newHistory = {
                 id: history.length,
                 date: new Date(),
