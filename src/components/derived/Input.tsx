@@ -16,7 +16,7 @@ export const InputPrompt = forwardRef((props: IInputPromptProps, ref: any) => {
     const textColor = executable ? "text-dark-green" : "text-dark-red";
 
     return (
-        <div className="flex flex-row space-x-2">
+        <div className="flex flex-row text-sm space-x-2">
             <label htmlFor="prompt" className="flex-shrink">
                 <PS1 />
             </label>

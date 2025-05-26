@@ -1,17 +1,17 @@
-import { Username } from "@/components/common";
-
 export const Information = () => (
     <div className="my-4">
-        <Username />
-        <pre>
-            Type <span className="font-bold">help</span> to see list of
-            available commands.
-        </pre>
-        <pre>
-            Type <span className="font-bold">neofetch</span> to display summary.
-        </pre>
-        <pre>
-            Type <span className="font-bold">repo</span> to go to my GitHub.
-        </pre>
+        <pre className="font-bold">Welcome to PSYCODER01 terminal V1.1</pre>
+        <div>
+            Type <span className="font-bold underline">help</span> to see list
+            of available commands.
+        </div>
+        <div>
+            Type <span className="font-bold underline">neofetch</span> to
+            display summary.
+        </div>
+        <div>
+            Type <span className="font-bold underline">repo</span> to show my
+            GitHub projects.
+        </div>
     </div>
 );

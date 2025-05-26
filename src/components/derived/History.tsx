@@ -15,10 +15,11 @@ export const History = (props: IHistory) => {
 
     return (
         <>
-            <div className={"flex flex-row items-center"}>
+            <div className={"flex gap-1 flex-row items-center"}>
                 <ChevronRight />
                 <span className={textColor}>{command}</span>
             </div>
+            <br />
             <div>
                 <Output />
             </div>
