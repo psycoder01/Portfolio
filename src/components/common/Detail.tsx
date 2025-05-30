@@ -21,7 +21,7 @@ export const Detail = (props: IDetailProps) => {
                 </a>
             );
 
-        return <span className="mx-4">{props.detail}</span>;
+        return <span className="mx-4">{detail}</span>;
     };
 
     return (

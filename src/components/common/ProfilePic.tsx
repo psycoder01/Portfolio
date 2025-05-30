@@ -3,5 +3,5 @@ interface IProfilePic {
 }
 
 export const ProfilePic = (props: IProfilePic) => (
-    <img src={props.src} className="w-50 h-64 rounded-full" />
+    <img src={props.src} className="max-w-[20vw] max-h-[30vh] rounded-full" />
 );

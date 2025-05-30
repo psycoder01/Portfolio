@@ -10,5 +10,5 @@ export type CommandInfo = {
 };
 
 export type CommandsOutput = {
-    [key in Commands]: () => React.FC;
+    [key in Commands]: React.FC;
 };

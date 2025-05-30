@@ -58,9 +58,9 @@ const CONTACT_DETAILS: ISummaryProps = {
 
 const Welcome = () => {
     return (
-        <div className="m-16 flex flex-row">
+        <div className="ml-4 flex flex-col gap-4 md:flex-row lg:flex-row">
             <ProfilePic src={imgSrc} />
-            <div className="ml-32 flex flex-col justify-between">
+            <div className="flex flex-col justify-between">
                 <Summary
                     title={ABOUT_DETAILS.title}
                     titleIcon={ABOUT_DETAILS.titleIcon}
