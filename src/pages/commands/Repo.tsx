@@ -40,7 +40,7 @@ const Repo: React.FC = () => {
     if (repos?.length === 0) return <div>No repo found</div>;
 
     return (
-        <div className="m-8 flex flex-col gap-4">
+        <div className="ml-4 flex flex-col gap-4">
             {repos.map((r) => (
                 <RepoSection key={r.name} repo={r} />
             ))}

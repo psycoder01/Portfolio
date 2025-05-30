@@ -41,7 +41,7 @@ export const RepoSection = (props: IRepoSection) => {
     const { repo } = props;
 
     return (
-        <div>
+        <div className="p-4 border border-dotted">
             <Detail label={"Project Name"} value={repo.name} />
             <Detail label={"About"} value={repo.description} />
             <Detail label={"GitHub"} value={repo.html_url} link />
@@ -50,7 +50,6 @@ export const RepoSection = (props: IRepoSection) => {
                 value={repo?.homepage ?? "N/A"}
                 link={!!repo?.homepage}
             />
-            |x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x|
         </div>
     );
 };

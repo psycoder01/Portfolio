@@ -3,7 +3,6 @@ import { forwardRef } from "react";
 import { PS1 } from "@/components/common";
 
 interface IInputPromptProps {
-    ref: React.RefObject<HTMLInputElement>;
     value: string;
     executable: boolean;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
