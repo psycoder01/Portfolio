@@ -35,7 +35,7 @@ const Repo: React.FC = () => {
         runFetchRepos();
     }, []);
 
-    if (loading) <div>wait a few seconds...</div>;
+    if (loading) return <div>wait a few seconds...</div>;
 
     if (repos?.length === 0) return <div>No repo found</div>;
 
