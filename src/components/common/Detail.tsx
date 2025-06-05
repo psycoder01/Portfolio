@@ -1,6 +1,6 @@
 export interface IDetailProps {
     detail: string;
-    icon: JSX.Element;
+    icon?: JSX.Element;
     href?: string;
     download?: boolean;
 }
@@ -8,12 +8,16 @@ export interface IDetailProps {
 export const Detail = (props: IDetailProps) => {
     const { detail, icon, href, download = false } = props;
 
+    const renderIcon = (icon: JSX.Element | undefined) => {
+        if (icon) return <span>{icon}</span>;
+    };
+
     const renderLink = (href: string | undefined) => {
         if (href)
             return (
                 <a
                     href={href}
-                    className="mx-4 underline"
+                    className="underline"
                     download={download}
                     target="_blank"
                 >
@@ -21,12 +25,12 @@ export const Detail = (props: IDetailProps) => {
                 </a>
             );
 
-        return <span className="mx-4">{detail}</span>;
+        return <span>{detail}</span>;
     };
 
     return (
-        <div className="flex flex-row items-center">
-            <span>{icon}</span>
+        <div className="flex flex-row gap-2">
+            {renderIcon(icon)}
             {renderLink(href)}
         </div>
     );

@@ -2,7 +2,7 @@ import { Detail, IDetailProps } from "@/components/common";
 
 export interface ISummaryProps {
     title: string;
-    titleIcon: JSX.Element;
+    titleIcon?: JSX.Element;
     details: IDetailProps[];
 }
 

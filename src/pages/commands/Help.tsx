@@ -25,7 +25,7 @@ const CommandList = (props: ICommandsListProps) => {
 const Help = () => {
     return (
         <>
-            <span>Commands : </span>
+            <span>Commands</span>
             <br />
             <div className="ml-4 grid grid-cols-[1fr_2fr] max-w-[60%]">
                 {Object.values(Commands)

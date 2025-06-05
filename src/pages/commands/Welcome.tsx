@@ -1,36 +1,38 @@
 import imgSrc from "@/assets/profile.jpg";
 import pdfUrl from "@/assets/Full_Stack_Developer.pdf";
 
-import {
-    IdentityIcon,
-    UserIcon,
-    WrenchIcon,
-    BuzzIcon,
-    MailIcon,
-    GithubIcon,
-    LinkedInIcon,
-    ContactIcon,
-    ResumeIcon,
-} from "@/assets/Icons";
+import { MailIcon, GithubIcon, LinkedInIcon, ResumeIcon } from "@/assets/Icons";
 import { ProfilePic } from "@/components/common";
 import { ISummaryProps, Summary } from "@/components/derived";
 
 const ABOUT_DETAILS: ISummaryProps = {
     title: "About",
-    titleIcon: <IdentityIcon />,
     details: [
-        { detail: "Aakash Chaudhary", icon: <UserIcon /> },
-        { detail: "Software Developer", icon: <WrenchIcon /> },
         {
-            detail: "Javascript/Typescript, React, NodeJS, SQL, Docker, Nginx, Scala, ZIO",
-            icon: <BuzzIcon />,
+            detail: "Aakash Chaudhary",
+            icon: <span className="font-bold">Name:</span>,
+        },
+        {
+            detail: "Software Developer",
+            icon: <span className="font-bold">Profession:</span>,
+        },
+        {
+            detail: "25 Years",
+            icon: <span className="font-bold">Uptime:</span>,
+        },
+        {
+            detail: "Arch Linux x86_64",
+            icon: <span className="font-bold">OS:</span>,
+        },
+        {
+            detail: "Javascript/Typescript, React, NodeJS, SQL, Docker, Nginx, Scala, ZIO, AWS, Azure, Kafka",
+            icon: <span className="font-bold">Tools:</span>,
         },
     ],
 };
 
 const CONTACT_DETAILS: ISummaryProps = {
     title: "Contact",
-    titleIcon: <ContactIcon />,
     details: [
         {
             detail: "aakashchy13@gmail.com",
@@ -63,13 +65,11 @@ const Welcome = () => {
             <div className="flex flex-col justify-between">
                 <Summary
                     title={ABOUT_DETAILS.title}
-                    titleIcon={ABOUT_DETAILS.titleIcon}
                     details={ABOUT_DETAILS.details}
                 />
                 <br />
                 <Summary
                     title={CONTACT_DETAILS.title}
-                    titleIcon={CONTACT_DETAILS.titleIcon}
                     details={CONTACT_DETAILS.details}
                 />
             </div>
